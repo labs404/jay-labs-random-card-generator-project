@@ -25,22 +25,38 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
+          <h1>Jay's Random Card Generator Project</h1>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <!-- start card content -->
+      <div class="row mt-5">
+        <div class="col-3"></div>
+        <div class="col-6">
           <div id="cardContainer">
             <div class="container-fluid text-center" id="theCard">
-              <div id="cardSuitTop">J</div>
+              <div id="cardSuitTop">
+                J
+              </div>
               <div id="cardValue">
                 <div>
-                  <img src="src/assets/img/joker_text.png" />
+                  <img
+                    src="src/assets/img/joker_text.png"
+                    style="width: 65%;"
+                  />
                 </div>
               </div>
               <div id="cardSuitBottom">
-                <div>J</div>
+                <div>
+                  J
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-3"></div>
       </div>
+      <!-- end card content -->
       <div class="row mt-5">
         <div class="col-3"></div>
         <div class="col-6 mt-3">
@@ -49,20 +65,20 @@
             id="drawCardButton"
             class="btn btn-success btn-outline-dark text-light border-3"
           >
-            Click here to draw another card..
+            Draw a card
           </button>
         </div>
         <div class="col-3"></div>
       </div>
-      <div class="row mt-5">
+      <div class="row mt-3">
         <div class="col-3"></div>
-        <div class="col-6 mt-3">
+        <div class="col-6">
           <button
             onclick="generateCardInterval()"
             id="timedButton"
-            class="btn btn-success btn-outline-dark text-light border-3"
+            class="btn btn-danger btn-outline-dark text-light border-3"
           >
-            Click here to start generate a card every 2 seconds..
+            Start/Stop new card every 2 seconds
           </button>
         </div>
         <div class="col-3"></div>

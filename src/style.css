@@ -1,11 +1,69 @@
 body {
-  background-color: green;
+  background-color: rgb(100, 200, 100);
+  font-family: "Lunasima", sans-serif;
+}
+/* * {
+  border: dashed 1px red;
+} */
+
+#cardContainer {
+  margin: 0 auto;
+  height: calc(60vh);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #theCard {
+  margin: 0 auto;
+  padding: 0px;
+  aspect-ratio: 9 / 14;
   background-color: white;
-  height: 650px;
-  width: 400px;
-  border-radius: 15px;
-  border: solid 4px black;
+  width: auto;
+  height: 100%;
+  border-radius: 25px;
+  border: solid 8px black;
+  display: block;
+  position: relative;
+  box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.8);
+}
+
+#cardSuitTop {
+  margin: 0;
+  /* padding: 1em 0px 0px 1em; */
+  padding: 0px 10%;
+  font-size: 10vh;
+  height: 20%;
+  justify-content: left;
+  align-items: start;
+  text-align: left;
+}
+#cardValue {
+  margin: 0;
+  padding: 0px;
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 14vh;
+}
+
+#cardValue div {
+}
+
+#cardSuitBottom {
+  margin: 0;
+  padding: 0;
+  height: 20%;
+}
+
+#cardSuitBottom div {
+  /* padding: 1em 0px 0px 1em; */
+  padding: 0px 10%;
+  font-size: 10vh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
 }

@@ -12,40 +12,62 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- end added from class -->
   </head>
   <body>
-    <div class="container text-center">
+    <div class="container text-center mt-5">
       <div class="row">
-        <div class="col-3">
-          Column left
-        </div>
+        <div class="col-3"></div>
         <div class="col-6">
-          <div class="container-fluid text-center" id="theCard">
-            <div id="cardSuitTop">face top</div>
-            <div id="cardValue">value center</div>
-            <div id="cardSuitBottom">face bottom</div>
+          <div id="cardContainer">
+            <div class="container-fluid text-center" id="theCard">
+              <div id="cardSuitTop">J</div>
+              <div id="cardValue">
+                <div>
+                  <img src="src/assets/img/joker_text.png" />
+                </div>
+              </div>
+              <div id="cardSuitBottom">
+                <div>J</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-3">
-          Column right
-        </div>
+        <div class="col-3"></div>
       </div>
-      <div class="row">
-        <div class="col-3">
-          Column left
-        </div>
+      <div class="row mt-5">
+        <div class="col-3"></div>
         <div class="col-6 mt-3">
-          <button onclick="drawTheCard()" id="documentButton">
+          <button
+            onclick="drawTheCard()"
+            id="drawCardButton"
+            class="btn btn-success btn-outline-dark text-light border-3"
+          >
             Click here to draw another card..
           </button>
         </div>
-        <div class="col-3">
-          Column right
+        <div class="col-3"></div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-3"></div>
+        <div class="col-6 mt-3">
+          <button
+            onclick="generateCardInterval()"
+            id="timedButton"
+            class="btn btn-success btn-outline-dark text-light border-3"
+          >
+            Click here to start generate a card every 2 seconds..
+          </button>
         </div>
+        <div class="col-3"></div>
       </div>
     </div>
-
     <script src="app.js"></script>
     <!-- start added from class -->
     <script

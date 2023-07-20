@@ -1,14 +1,11 @@
-/* eslint-disable */
-// import "bootstrap";
 import "./style.css";
-
-// import "./assets/img/rigo-baby.jpg";
-// import "./assets/img/4geeks.ico";
 
 window.onload = () => {
   // create arrays of suits and values
-  let suits = ["♣", "♠", "♦", "♥"];
+  // let suits = ["♣", "♠", "♦", "♥"]; // keeping in case font/character issues arrise
+  let suits = ["&#9827;", "&#9824", "&#9830", "&#9829"];
   let value = ["2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K", "A"];
+  var glorf = 0;
 
   // generate random suit and value
   let randomSuit = () => {
@@ -18,7 +15,7 @@ window.onload = () => {
     return Math.floor(Math.random() * 12);
   };
 
-  // draw a card
+  // function to draw a card and generate html content.
   let drawTheCard = () => {
     document.querySelector("#theCard").innerHTML = `
     <div id="cardSuitTop"></div>
@@ -29,7 +26,8 @@ window.onload = () => {
     let drawnValue = value[randomValue()];
     var suitColor = "blue";
 
-    if (drawnSuit === "♥" || drawnSuit === "♦") {
+    if (drawnSuit === "&#9829" || drawnSuit === "&#9830") {
+      // if (drawnSuit === "♥" || drawnSuit === "♦") { // keeping in case font/character issues arrise
       var suitColor = "red";
     } else {
       var suitColor = "black";
@@ -44,8 +42,22 @@ window.onload = () => {
       "#cardSuitBottom"
     ).innerHTML = `<div style="color:${suitColor}">${drawnSuit}</div>`;
   };
-  // drawTheCard();
+  // drawTheCard() onclick listener
   document
-    .getElementById("documentButton")
+    .getElementById("drawCardButton")
     .addEventListener("click", drawTheCard);
+
+  //function for timed interval card generation.
+  let interval = null;
+
+  document.getElementById("timedButton").addEventListener("click", function() {
+    if (interval === null) {
+      interval = setInterval(function() {
+        drawTheCard();
+      }, 2000);
+    } else {
+      clearInterval(interval);
+      interval = null;
+    }
+  });
 };

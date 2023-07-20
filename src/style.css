@@ -1,8 +1,9 @@
 body {
-  background-color: rgb(100, 200, 100);
+  background-color: rgb(100, 200, 100) !important; 
   font-family: "Lunasima", sans-serif;
 }
-/* * {
+
+/** {
   border: dashed 1px red;
 } */
 
@@ -12,6 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  display: flex;
 }
 
 #theCard {

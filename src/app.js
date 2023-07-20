@@ -1,4 +1,4 @@
-// import "./style.css";
+import "./style.css";
 
 window.onload = () => {
   // create arrays of suits and values

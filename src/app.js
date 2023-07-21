@@ -3,9 +3,8 @@ import "./style.css";
 window.onload = () => {
   // create arrays of suits and values
   // let suits = ["♣", "♠", "♦", "♥"]; // keeping in case font/character issues arrise
-  let suits = ["&#9827;", "&#9824", "&#9830", "&#9829"];
+  let suits = ["&#9827;", "&#9824;", "&#9830;", "&#9829;"];
   let value = ["2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K", "A"];
-  var glorf = 0;
 
   // generate random suit and value
   let randomSuit = () => {
@@ -26,9 +25,9 @@ window.onload = () => {
     let drawnValue = value[randomValue()];
     var suitColor = "blue";
 
-    if (drawnSuit === "&#9829" || drawnSuit === "&#9830") {
+    if (drawnSuit === "&#9829;" || drawnSuit === "&#9830;") {
       // if (drawnSuit === "♥" || drawnSuit === "♦") { // keeping in case font/character issues arrise
-      var suitColor = "red";
+      var suitColor = "darkred";
     } else {
       var suitColor = "black";
     }
@@ -41,6 +40,18 @@ window.onload = () => {
     document.querySelector(
       "#cardSuitBottom"
     ).innerHTML = `<div style="color:${suitColor}">${drawnSuit}</div>`;
+
+    let consoleSuite = "";
+    if (drawnSuit === "&#9827;") {
+      consoleSuite = "clubs";
+    } else if (drawnSuit === "&#9824;") {
+      consoleSuite = "spades";
+    } else if (drawnSuit === "&#9830;") {
+      consoleSuite = "diamonds";
+    } else if (drawnSuit === "&#9829;") {
+      consoleSuite = "hearts";
+    }
+    console.log("card drawn was " + drawnValue + " of " + consoleSuite);
   };
   // drawTheCard() onclick listener
   document

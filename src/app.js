@@ -23,23 +23,24 @@ window.onload = () => {
 
     let drawnSuit = suits[randomSuit()];
     let drawnValue = value[randomValue()];
-    var suitColor = "blue";
 
-    if (drawnSuit === "&#9829;" || drawnSuit === "&#9830;") {
-      // if (drawnSuit === "♥" || drawnSuit === "♦") { // keeping in case font/character issues arrise
-      var suitColor = "darkred";
-    } else {
-      var suitColor = "black";
-    }
+    let suitColor = () => {
+      if (drawnSuit === "&#9829;" || drawnSuit === "&#9830;") {
+        return "darkred";
+      } else {
+        return "black";
+      }
+    };
+
     document.querySelector(
       "#cardSuitTop"
-    ).innerHTML = `<div style="color:${suitColor}">${drawnSuit}</div>`;
+    ).innerHTML = `<div style="color:${suitColor()}">${drawnSuit}</div>`;
     document.querySelector(
       "#cardValue"
-    ).innerHTML = `<div style="color:${suitColor}">${drawnValue}</div>`;
+    ).innerHTML = `<div style="color:${suitColor()}">${drawnValue}</div>`;
     document.querySelector(
       "#cardSuitBottom"
-    ).innerHTML = `<div style="color:${suitColor}">${drawnSuit}</div>`;
+    ).innerHTML = `<div style="color:${suitColor()}">${drawnSuit}</div>`;
 
     let consoleSuite = "";
     if (drawnSuit === "&#9827;") {

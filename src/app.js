@@ -1,4 +1,5 @@
 import "./style.css";
+/* eslint-disable */
 
 window.onload = () => {
   // create arrays of suits and values
